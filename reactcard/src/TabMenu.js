@@ -94,7 +94,7 @@ export default function NavTabs() {
         <div className={classes.root}>
             <AppBar position="static" className={classes.toolbar}>
                 <div>
-                    <a href={brickAbodeUrl} target="_blank">
+                    <a href={brickAbodeUrl} target="_blank" rel="noopener noreferrer">
                         <img className={classes.logo} src={brickLogo} alt="Brick Abode Logo" />
                     </a>
                 </div>
