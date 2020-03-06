@@ -15,7 +15,6 @@ import omg from "./assets/omg.gif";
 import jellyfish from "./assets/jellyfish.jpg";
 import ciImage from "./assets/ciTheBible.png";
 import pgDotnet from "./assets/dotnet.png";
-
 import brickLogo from './assets/brick-abode.png'
 
 function TabPanel(props) {
@@ -69,7 +68,6 @@ const useStyles = makeStyles(theme => ({
     },
     toolbar: {
         backgroundColor: "rgba(2, 37, 58, 0.94)",
-        /*borderBottom: "solid 3px rgb(255, 232, 8)"*/
     },
     logo: {
         padding: 25,
@@ -108,7 +106,7 @@ export default function NavTabs() {
                 >
                     <LinkTab label="Main Pages" href="/main" {...a11yProps(0)} />
                     <LinkTab label="Task Juggler" href="/tj" {...a11yProps(1)} />
-                    <LinkTab label="Documentation" href="/docs" {...a11yProps(2)} />
+                    <LinkTab label="Docs" href="/docs" {...a11yProps(2)} />
                     <LinkTab label="YouTube" href="/youtube" {...a11yProps(3)} />
                 </Tabs>
             </AppBar>
@@ -184,6 +182,6 @@ export default function NavTabs() {
                     />
                 </div>
             </TabPanel>
-        </div>
+        </div >
     );
 }
