@@ -10,6 +10,7 @@ import Box from '@material-ui/core/Box';
 import zulipLogo from "./assets/icon.ico.png";
 import gitLabLogo from "./assets/GitLab_logo.png";
 import curseCI from "./assets/nintendo64.gif";
+import superMario from "./assets/superMario.gif"
 import omg from "./assets/omg.gif";
 import jellyfish from "./assets/jellyfish.jpg";
 import ciImage from "./assets/ciTheBible.png";
@@ -89,14 +90,16 @@ export default function NavTabs() {
         setValue(newValue);
     };
 
-    const url = "https://www.brickabode.com/";
+    const brickAbodeUrl = "https://www.brickabode.com/";
 
     return (
         <div className={classes.root}>
             <AppBar position="static" className={classes.toolbar}>
-                <a href={url} target="_blank">
-                    <img className={classes.logo} src={brickLogo} alt="Brick Abode Logo" />
-                </a>
+                <div>
+                    <a href={brickAbodeUrl} target="_blank">
+                        <img className={classes.logo} src={brickLogo} alt="Brick Abode Logo" />
+                    </a>
+                </div>
                 <Tabs
                     variant="fullWidth"
                     value={value}
@@ -160,8 +163,16 @@ export default function NavTabs() {
                 </div>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                Page Three
-      </TabPanel>
+                <div className={classes.mainDiv}>
+                    <MainCard
+                        url="https://www.youtube.com/watch?v=KCiVG6mTor0"
+                        logo={superMario}
+                        mainText="Documentation"
+                        secondaryText="We don't have useful links for docs yet :("
+                        nameClass={"media"}
+                    />
+                </div>
+            </TabPanel>
             <TabPanel value={value} index={3}>
                 <div className={classes.mainDiv}>
                     <MainCard
