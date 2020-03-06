@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/ReactCard/static/css/main.34de6062.chunk.css",
+    "main.js": "/ReactCard/static/js/main.3fc3e80a.chunk.js",
+    "main.js.map": "/ReactCard/static/js/main.3fc3e80a.chunk.js.map",
+    "runtime-main.js": "/ReactCard/static/js/runtime-main.eb160a29.js",
+    "runtime-main.js.map": "/ReactCard/static/js/runtime-main.eb160a29.js.map",
+    "static/js/2.05da0624.chunk.js": "/ReactCard/static/js/2.05da0624.chunk.js",
+    "static/js/2.05da0624.chunk.js.map": "/ReactCard/static/js/2.05da0624.chunk.js.map",
+    "index.html": "/ReactCard/index.html",
+    "precache-manifest.80466889e7b37799bd6ac067366354d6.js": "/ReactCard/precache-manifest.80466889e7b37799bd6ac067366354d6.js",
+    "service-worker.js": "/ReactCard/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/ReactCard/static/css/main.34de6062.chunk.css.map",
+    "static/js/2.05da0624.chunk.js.LICENSE.txt": "/ReactCard/static/js/2.05da0624.chunk.js.LICENSE.txt",
+    "static/media/GitLab_logo.png": "/ReactCard/static/media/GitLab_logo.9e15b29f.png",
+    "static/media/ciTheBible.png": "/ReactCard/static/media/ciTheBible.74700669.png",
+    "static/media/dotnet.png": "/ReactCard/static/media/dotnet.6eb1ee09.png",
+    "static/media/icon.ico.png": "/ReactCard/static/media/icon.ico.ddb311f5.png",
+    "static/media/jellyfish.jpg": "/ReactCard/static/media/jellyfish.1b7e959c.jpg",
+    "static/media/nintendo64.gif": "/ReactCard/static/media/nintendo64.82ed6333.gif",
+    "static/media/omg.gif": "/ReactCard/static/media/omg.bc6566ce.gif",
+    "static/media/superMario.gif": "/ReactCard/static/media/superMario.ac6e48cc.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eb160a29.js",
+    "static/js/2.05da0624.chunk.js",
+    "static/css/main.34de6062.chunk.css",
+    "static/js/main.3fc3e80a.chunk.js"
+  ]
+}
