@@ -16,8 +16,10 @@ import jellyfish from "./assets/jellyfish.jpg";
 import ciImage from "./assets/ciTheBible.png";
 import pgDotnet from "./assets/dotnet.png";
 import brickLogo from './assets/brick-abode.png'
+import ReactEaster from './ReactEaster';
+import app from "./base";
 
-function TabPanel(props) {
+export const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
 
     return (
@@ -83,12 +85,11 @@ const useStyles = makeStyles(theme => ({
 export default function NavTabs() {
     const classes = useStyles();
     const [value, setValue] = React.useState(0);
+    const brickAbodeUrl = "https://www.brickabode.com/";
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-
-    const brickAbodeUrl = "https://www.brickabode.com/";
 
     return (
         <div className={classes.root}>
@@ -97,6 +98,7 @@ export default function NavTabs() {
                     <a href={brickAbodeUrl} target="_blank" rel="noopener noreferrer">
                         <img className={classes.logo} src={brickLogo} alt="Brick Abode Logo" />
                     </a>
+                    <button onClick={() => app.auth().signOut()}>Sign out</button>
                 </div>
                 <Tabs
                     variant="fullWidth"
@@ -182,6 +184,7 @@ export default function NavTabs() {
                     />
                 </div>
             </TabPanel>
+            <ReactEaster />
         </div >
     );
 }

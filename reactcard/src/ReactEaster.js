@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
 export default function ReactEaster() {
     const classes = useStyles();
 
-    const konamiCode = [
+    const konamiCode1 = [
         'arrowup',
         'arrowup',
         'arrowdown',
@@ -30,37 +30,81 @@ export default function ReactEaster() {
         'a',
         'enter'
     ];
+    const konamiCode2 = [
+        'arrowup',
+        'arrowdown',
+        'arrowup',
+        'arrowdown',
+        'arrowleft',
+        'arrowright',
+        'x',
+        'y',
+        'enter'
+    ];
     return (
-        <EasterEgg keys={konamiCode}
-            timeout={5000}>
-            <div className={classes.root}>
-                <iframe class="playing-mario"
-                    src={curseCI}
-                    frameborder="0"
-                    allowfullscreen
-                />
-                I HATE CI
+        <div>
+            <EasterEgg keys={konamiCode1}
+                timeout={5000}>
+                <div className={classes.root}>
+                    <iframe title="first" class="playing-mario"
+                        src={curseCI}
+                        frameborder="0"
+                        allowfullscreen
+                    />
+                    I HATE CI
                 <br />
-                I HATE CI
+                    I HATE CI
                 <br />
-                I HATE CI
+                    I HATE CI
                 <br />
-                I HATE CI
+                    I HATE CI
                 <br />
-                I HATE CI
+                    I HATE CI
                 <br />
-                I HATE CI
+                    I HATE CI
                 <br />
-                I HATE CI
+                    I HATE CI
                 <br />
-                I HATE CI
+                    I HATE CI
                 <br />
-                I HATE CI
+                    I HATE CI
                 <br />
-                I HATE CI
+                    I HATE CI
                 <br />
-                I HATE CI
+                    I HATE CI
             </div>
-        </EasterEgg>
+            </EasterEgg>
+            <EasterEgg keys={konamiCode2}
+                timeout={5000}>
+                <div className={classes.root}>
+                    <iframe title="second" class="playing-mario"
+                        src={superMario}
+                        frameborder="0"
+                        allowfullscreen
+                    />
+                    I LOVE CI
+            <br />
+                    I LOVE CI
+            <br />
+                    I LOVE CI
+            <br />
+                    I LOVE CI
+            <br />
+                    I LOVE CI
+            <br />
+                    I LOVE CI
+            <br />
+                    I LOVE CI
+            <br />
+                    I LOVE CI
+            <br />
+                    I LOVE CI
+            <br />
+                    I LOVE CI
+            <br />
+                    I LOVE CI
+        </div>
+            </EasterEgg>
+        </div>
     );
 }
