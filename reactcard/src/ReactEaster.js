@@ -81,6 +81,7 @@ export default function ReactEaster() {
                         src={superMario}
                         frameborder="0"
                         allowfullscreen
+                        scrolling="no"
                     />
                     I LOVE CI
             <br />

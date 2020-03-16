@@ -8,27 +8,17 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import * as firebase from 'firebase';
+import TextField from '@material-ui/core/TextField';
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles({
     root: {
         minWidth: 275,
     },
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
-    },
-    title: {
-        fontSize: 14,
-    },
-    pos: {
-        marginBottom: 12,
-    },
     mainDiv: {
         position: "relative",
         display: "flex",
         justifyContent: "center",
-        flexWrap: "wrap"
     },
 });
 
@@ -50,31 +40,25 @@ const Login = ({ history }) => {
         },
         [history]
     );
+
     const Auth = useContext(AuthContext);
+
     const checkIfIsABAEmail = (email) => {
-        const test = email.split('@');
-        const test2 = "brickabode.com"
-        console.log("test", email.split('@')[1]);
-        console.log("test2", test2);
-        console.log(test[1] === test2);
-        return email.split('@')[1] === test2;
+        return email.split('@')[1] === "brickabode.com";
     }
+
     const handleGLogin = useCallback(
         async event => {
             const provider = new firebase.auth.GoogleAuthProvider();
-
-            console.log("caiu aqui provider", provider);
             try {
                 await app
                     .auth()
                     .setPersistence(firebase.auth.Auth.Persistence.SESSION)
                     .then(() => {
-                        console.log("caiu aqui app", app);
                         app
                             .auth()
                             .signInWithPopup(provider)
                             .then(result => {
-                                console.log("result:", result.user.email)
                                 if (checkIfIsABAEmail(result.user.email)) {
                                     history.push('/')
                                 } else { app.auth().signOut() }
@@ -97,26 +81,46 @@ const Login = ({ history }) => {
         <div className={classes.mainDiv}>
             <Card className={classes.root}>
                 <CardContent>
+                    <Typography variant="h4" gutterBottom>
+                        BA Login Screen
+                    </Typography>
                     <form onSubmit={handleLogin}>
-                        <label>
-                            Email
-                    <input name="email" type="email" placeholder="Email" />
-                        </label>
-                        <label>
-                            Password
-                    <input name="password" type="password" placeholder="Password" />
-                        </label>
-                        <button type="submit">Log in</button>
-
+                        <TextField
+                            required
+                            name="email"
+                            id="outlined-password-input"
+                            label="Email"
+                            type="text"
+                            autoComplete="current-password"
+                            variant="outlined"
+                            size="small"
+                        />
+                        <TextField
+                            required
+                            name="password"
+                            id="outlined-password-input"
+                            label="Password"
+                            type="password"
+                            autoComplete="current-password"
+                            variant="outlined"
+                            size="small"
+                        />
+                        <Button
+                            type="submit"
+                            variant="outlined"
+                            color="primary"
+                        >LogIn</Button>
                     </form>
                 </CardContent>
                 <CardActions>
-                    <Button onClick={handleGLogin}>
+                    <Button onClick={handleGLogin} size="medium"
+                        variant="outlined"
+                        color="primary"
+                    >
                         <img
                             src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
                             alt="logo"
-                            width="13px"
-                            height="13px"
+                            width="10px"
                         />Login with Google</Button>
                 </CardActions>
             </Card>

@@ -18,6 +18,8 @@ import pgDotnet from "./assets/dotnet.png";
 import brickLogo from './assets/brick-abode.png'
 import ReactEaster from './ReactEaster';
 import app from "./base";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import IconButton from '@material-ui/core/IconButton';
 
 export const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
@@ -80,6 +82,9 @@ const useStyles = makeStyles(theme => ({
         justifyContent: "center",
         flexWrap: "wrap"
     },
+    toolbarDiv: {
+        display: "flex"
+    },
 }));
 
 export default function NavTabs() {
@@ -94,11 +99,13 @@ export default function NavTabs() {
     return (
         <div className={classes.root}>
             <AppBar position="static" className={classes.toolbar}>
-                <div>
+                <div className={classes.toolbarDiv}>
                     <a href={brickAbodeUrl} target="_blank" rel="noopener noreferrer">
                         <img className={classes.logo} src={brickLogo} alt="Brick Abode Logo" />
                     </a>
-                    <button onClick={() => app.auth().signOut()}>Sign out</button>
+                    <IconButton color="secondary" aria-label="delete" className={classes.margin} onClick={() => app.auth().signOut()}>
+                        <ExitToAppIcon fontSize="inherit" />
+                    </IconButton>
                 </div>
                 <Tabs
                     variant="fullWidth"
